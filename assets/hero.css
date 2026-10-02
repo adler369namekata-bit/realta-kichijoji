@@ -1,0 +1,28 @@
+/* The opening is self-contained; it shares only colors and font files with the site. */
+.arrival{position:relative;isolation:isolate;overflow:hidden;background:#090908;color:#f5efdf;border-bottom:1px solid #33362e;font-family:"Cormorant Garamond","Noto Serif JP",serif}
+.arrival-scene{position:absolute;inset:0;z-index:-1}
+.arrival-image{display:block;width:100%;height:100%;object-fit:cover;object-position:center 50%}
+.arrival-scene::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.84) 0%,rgba(0,0,0,.7) 30%,rgba(0,0,0,.38) 52%,rgba(0,0,0,.09) 75%,transparent 100%),linear-gradient(0deg,rgba(0,0,0,.84),transparent 52%,rgba(0,0,0,.12))}
+.arrival-layout{display:flex;flex-direction:column;min-height:890px;padding:98px 10.4% 38px}
+.arrival-story{width:min(100%,660px)}
+.arrival-kicker{font-size:20px;line-height:1.4;letter-spacing:.23em;font-weight:500;color:#eee7d8;margin:0 0 26px}
+.arrival-identity{display:flex;flex-direction:column;align-items:center;width:fit-content;max-width:100%;margin:0;color:#ead9b0;font-weight:400;line-height:1}
+.arrival-bar{display:block;font-size:34px;letter-spacing:.22em;line-height:1;margin-bottom:0}
+.arrival-name{display:block;white-space:nowrap;font-size:clamp(88px,7vw,112px);line-height:1.04;letter-spacing:.12em}
+.arrival-origin{display:block;align-self:stretch;border-top:1px solid #bea365;margin-top:10px;padding-top:15px;font-size:19px;line-height:1.4;letter-spacing:.28em;text-align:center;white-space:nowrap}
+.arrival-invitation{margin-top:30px}
+.arrival-copy{font-family:"Noto Serif JP","Yu Mincho",serif;font-size:clamp(44px,4.8vw,76px);font-weight:300;line-height:1.5;letter-spacing:.065em;white-space:nowrap;color:#fff;margin:0 0 28px}
+.arrival-description{font-size:19px;font-weight:400;line-height:1.95;letter-spacing:.025em;color:#f0ede6;margin:0;text-shadow:0 1px 8px #000}
+.arrival-button{display:inline-flex;justify-content:space-between;align-items:center;gap:45px;min-width:320px;padding:18px 30px;margin-top:40px;border:1px solid #d1b77d;font-size:20px;line-height:1.6;letter-spacing:.1em;color:#f5efdf;background:rgba(0,0,0,.12);transition:background .2s}
+.arrival-button:hover{background:rgba(181,164,124,.18);color:#fff}.arrival-button span{font-size:26px;line-height:1;color:#d1b77d}
+.arrival-foot{position:relative;display:flex;align-items:end;justify-content:space-between;gap:24px;border-top:1px solid #c7ab75;margin-top:54px;padding-top:20px}
+.arrival-hours{margin:0;color:#e6decd;font-size:16px;line-height:1.8;letter-spacing:.2em}
+.arrival-hours strong{font-weight:400;white-space:nowrap;margin-left:20px}
+.arrival-dot{display:inline-block;width:4px;height:4px;border-radius:50%;background:#c7ab75;margin-right:12px;vertical-align:middle}
+.arrival-scroll{position:absolute;right:0;bottom:0;display:flex;flex-direction:column-reverse;align-items:center;gap:4px;white-space:nowrap;font-size:14px;letter-spacing:.16em;color:#efe7d5}
+.arrival-scroll span{font-family:serif;font-size:32px;line-height:1.2;font-weight:300}
+@media(min-width:1600px){.arrival-story{width:720px}.arrival-layout{padding-top:105px}}
+@media(max-width:1300px) and (min-width:901px){.arrival-layout{padding-left:9%;padding-right:9%;padding-top:82px}.arrival-story{width:58%}.arrival-kicker{font-size:17px}.arrival-bar{font-size:30px}.arrival-origin{font-size:16px;letter-spacing:.23em}.arrival-description{font-size:17px}.arrival-copy{font-size:4.6vw}.arrival-button{min-width:280px;font-size:18px}}
+@media(max-width:900px){.arrival-layout{min-height:0;padding:58px 8% 30px}.arrival-story{width:100%;max-width:570px}.arrival-scene::after{background:linear-gradient(90deg,rgba(0,0,0,.86),rgba(0,0,0,.69) 60%,rgba(0,0,0,.23)),linear-gradient(0deg,rgba(0,0,0,.65),transparent 70%)}.arrival-kicker{font-size:15px;letter-spacing:.15em;margin-bottom:28px}.arrival-bar{font-size:27px}.arrival-name{font-size:clamp(66px,17vw,102px);letter-spacing:.1em}.arrival-origin{font-size:15px;letter-spacing:.2em;padding-top:13px}.arrival-invitation{margin-top:42px}.arrival-copy{font-size:clamp(28px,7.8vw,44px);letter-spacing:.025em;margin-bottom:25px}.arrival-description{font-size:16px;line-height:2.1}.arrival-button{min-width:0;max-width:100%;width:280px;font-size:16px;padding:15px 22px;margin-top:32px}.arrival-foot{margin-top:45px;align-items:end;flex-wrap:wrap;gap:18px}.arrival-hours{font-size:14px;letter-spacing:.1em}.arrival-hours strong{margin-left:10px}.arrival-scroll{position:static;margin-left:auto;font-size:14px}.arrival-scroll span{font-size:26px}}
+@media(max-width:360px){.arrival-kicker{font-size:14px;letter-spacing:.09em}.arrival-name{font-size:57px;letter-spacing:.08em}.arrival-origin{font-size:14px;letter-spacing:.13em}.arrival-copy{font-size:26px}.arrival-hours{letter-spacing:.03em}.arrival-dot{margin-right:6px}}
+@media(prefers-reduced-motion:reduce){.arrival-button{transition:none}}
