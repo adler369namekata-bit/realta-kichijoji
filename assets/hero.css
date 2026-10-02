@@ -34,3 +34,6 @@
 .arrival-social:hover{color:#f5efdf;border-color:#d1b77d}.arrival-social>span[aria-hidden]{font-size:21px;color:#bca778}
 @media(max-width:900px){.arrival-actions{margin-top:32px;gap:12px}.arrival-social{font-size:16px;padding:15px 20px}}
 @media(prefers-reduced-motion:reduce){.arrival-social{transition:none}}
+
+/* Keep the interior screenshot's thin top/bottom borders outside the hero. */
+.arrival-image{transform:scale(1.023)}

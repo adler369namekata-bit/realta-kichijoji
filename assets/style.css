@@ -89,3 +89,14 @@ h1,h2,h3,.photo-intro>p:last-child{font-family:var(--serif);font-weight:300}
 .experience .leisure-price{margin-top:20px;padding-top:14px}.experience .leisure-note{margin-top:12px}.experience>.leisure-image-note{margin-top:18px}.experience>.age-note{margin-top:14px}
 @media(max-width:1100px){.experience .leisure-row{grid-template-columns:minmax(0,33fr) minmax(0,67fr)}.experience .leisure-visual{max-width:280px}.experience .leisure-content{padding:16px 22px}}
 @media(max-width:800px){.experience{padding-top:48px;padding-bottom:48px}.experience .leisure-row{grid-template-columns:minmax(0,1fr);padding:12px}.experience .leisure-visual{width:65%;max-width:220px}.experience .leisure-visual img{max-height:165px}.experience .leisure-content{padding:20px 8px 14px}.experience>.section-label{margin-bottom:28px}.experience .leisure-list{gap:20px}}
+
+/* Clip screenshot edges inside the original photo dimensions. Originals stay intact. */
+.store-photo-frame{position:relative;width:100%;overflow:hidden}
+.counter-photo .store-photo-frame{aspect-ratio:1120/1462}
+.shelf-photo .store-photo-frame{aspect-ratio:1206/921}
+.exterior-photo .store-photo-frame{aspect-ratio:1097/1493}
+.store-photo-frame img{position:absolute;width:100%;height:100%;max-width:none;transform-origin:top left}
+/* Uniform scaling preserves proportions while removing only narrow edge strips. */
+.counter-photo .store-photo-frame img{transform:translate(-2.01%,-1.41%) scale(1.0201)}
+.shelf-photo .store-photo-frame img{transform:translate(-3.35%,-1.65%) scale(1.0335)}
+.exterior-photo .store-photo-frame img{transform:translate(-1.1%,-1.32%) scale(1.022)}
