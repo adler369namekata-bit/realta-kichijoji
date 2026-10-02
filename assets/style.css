@@ -37,3 +37,23 @@ h1,h2,h3,.hero-japanese,.photo-intro>p:last-child{font-family:var(--serif);font-
 .eyebrow,.section-label,.about-facts>div>span,.hero .eyebrow,.store-photo figcaption span:first-child,.card-art>span{letter-spacing:.2em}
 .hero-name{letter-spacing:.18em}.hero-bottom,.back-top,.menu-toggle{letter-spacing:.14em}
 @media(max-width:520px){.hero .eyebrow{font-size:15px;letter-spacing:.16em}.hero-name{letter-spacing:.12em}}
+
+
+/* Brand-led opening: all changes scoped to the header and hero. */
+.site-header{min-height:132px;padding-top:16px;padding-bottom:16px}
+.site-header .brand{display:block;text-align:center;line-height:1;flex-shrink:0}
+.site-header .brand-small{display:block;font-size:17px;letter-spacing:.3em;margin-bottom:4px}
+.site-header .brand-word{display:block;font-size:52px;letter-spacing:.18em}
+.site-header .brand-place{font-size:14px;letter-spacing:.23em;border-top:1px solid var(--gold);padding-top:9px;margin-top:9px}
+.hero{height:calc(100svh - 132px);min-height:760px;padding-top:50px;padding-bottom:125px}
+.hero-content{max-width:800px}.hero .eyebrow{font-size:15px;letter-spacing:.23em;margin-bottom:20px}
+.hero .hero-brand{width:fit-content;max-width:100%;text-align:center;margin:0 0 26px;font-family:var(--serif);font-weight:400}
+.hero-brand-bar{display:block;font-size:26px;line-height:1.2;letter-spacing:.28em;color:#eee4cc}
+.hero-brand-word{display:block;font-size:clamp(88px,10.5vw,160px);line-height:1.02;letter-spacing:.13em;color:#f4eddd}
+.hero-brand-place{display:block;border-top:1px solid var(--gold);margin-top:8px;padding-top:14px;font-size:17px;line-height:1.5;letter-spacing:.3em;color:#d8c497}
+.hero .hero-japanese{font-family:"Noto Serif JP","Yu Mincho",serif;font-weight:300;font-size:clamp(36px,4vw,58px);line-height:1.6;letter-spacing:.12em;margin:0 0 22px;color:#fff}
+.hero-overlay{background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.7) 43%,rgba(0,0,0,.2) 75%,rgba(0,0,0,.13)),linear-gradient(0deg,rgba(0,0,0,.7),transparent 45%,rgba(0,0,0,.2))}
+.hero .text-link{padding:15px 28px;gap:50px}.hero-bottom{border-color:#b5a47c99}
+@media(max-width:1100px){.site-header .brand-word{font-size:40px}.site-header .brand-place{font-size:14px;letter-spacing:.15em}.site-header{gap:16px}.hero-brand-word{font-size:clamp(80px,10vw,120px)}}
+@media(max-width:1000px){.site-header{min-height:120px}.site-header .brand-word{font-size:44px}.site-header .brand-place{font-size:14px}.hero{height:auto;min-height:760px;padding-top:50px;padding-bottom:130px}.hero-content{max-width:650px}.hero-brand-word{font-size:clamp(70px,12vw,115px)}.hero .hero-japanese{font-size:42px}.hero-overlay{background:linear-gradient(90deg,rgba(0,0,0,.83),rgba(0,0,0,.65) 65%,rgba(0,0,0,.3)),linear-gradient(0deg,rgba(0,0,0,.65),transparent 65%)}}
+@media(max-width:520px){.site-header{min-height:105px;padding-top:12px;padding-bottom:12px}.site-header .brand-small{font-size:14px}.site-header .brand-word{font-size:35px}.site-header .brand-place{font-size:14px;letter-spacing:.12em;padding-top:7px;margin-top:7px}.hero{min-height:800px;padding-top:46px;padding-bottom:130px}.hero .eyebrow{font-size:14px;letter-spacing:.12em;margin-bottom:22px}.hero-brand-bar{font-size:21px}.hero-brand-word{font-size:clamp(48px,15vw,76px);letter-spacing:.12em}.hero-brand-place{font-size:14px;letter-spacing:.15em;padding-top:12px}.hero .hero-brand{margin-bottom:28px}.hero .hero-japanese{font-size:clamp(25px,7.5vw,37px);letter-spacing:.08em;margin-bottom:22px}.hero .text-link{padding:14px 20px;gap:30px}}
