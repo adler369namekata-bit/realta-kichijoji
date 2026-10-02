@@ -56,3 +56,9 @@ h1,h2,h3,.photo-intro>p:last-child{font-family:var(--serif);font-weight:300}
 
 .story-prose p.story-signature{margin-top:42px;text-align:right;font-size:14px;line-height:1.9;letter-spacing:.08em;color:var(--gold)}
 @media(max-width:520px){.story-prose p.story-signature{margin-top:34px}}
+
+/* Prices in the existing service rows. */
+.drinks-copy .service-price{margin-top:12px;color:var(--text);line-height:1.8}
+.service-price>span{font-size:14px;letter-spacing:.08em;color:var(--muted)}
+.service-price>strong{font-family:var(--serif);font-size:24px;font-weight:400;letter-spacing:.025em;color:var(--text)}
+@media(max-width:520px){.service-price>strong{font-size:22px}}
