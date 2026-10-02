@@ -83,22 +83,23 @@ h1,h2,h3,.photo-intro>p:last-child{font-family:var(--serif);font-weight:300}
 .experience{padding-top:48px;padding-bottom:48px}
 .experience>.section-label,.experience>.section-heading,.experience>.leisure-list,.experience>.leisure-image-note,.experience>.age-note{max-width:1230px;margin-left:auto;margin-right:auto}
 .experience>.section-label{margin-bottom:24px}.experience>.section-heading{margin-bottom:24px}
-.experience .leisure-list{gap:18px}
+.experience .leisure-list{gap:12px}
 .experience .leisure-row{grid-template-columns:minmax(0,42fr) minmax(0,58fr);padding:0;align-items:center}
 .experience .leisure-visual{width:100%;justify-self:center}
-.experience .leisure-visual img{width:100%;height:auto;aspect-ratio:16/9;max-height:220px;object-fit:cover;filter:brightness(.72) saturate(.82)}
-.experience .leisure-row:first-child .leisure-visual img{object-position:center 40%}
+.experience .leisure-visual img{width:100%;height:auto;aspect-ratio:5/2;max-height:165px;object-fit:cover;object-position:center 35%;filter:brightness(.72) saturate(.82)}
+.experience .leisure-row:first-child .leisure-visual img{object-position:center 20%}
 .experience .leisure-visual::after{background:linear-gradient(90deg,rgba(0,0,0,.08),rgba(0,0,0,.16))}
-.experience .leisure-content{padding:18px 28px}
-.experience .leisure-label{font-size:15px;margin-bottom:10px}
-.experience .leisure-content h3{font-size:32px;line-height:1.4;margin-bottom:12px}
-.experience .leisure-description{line-height:1.9}
-.experience .leisure-price{margin-top:16px;padding-top:12px;font-size:19px}
+.experience .leisure-content{padding:8px 28px}
+.experience .leisure-label{font-size:15px;line-height:1.6;margin-bottom:3px}
+.experience .leisure-content h3{font-size:32px;line-height:1.2;margin-bottom:4px}
+.experience .leisure-content h3>span{line-height:1.2;margin-bottom:3px}
+.experience .leisure-description{line-height:1.65}
+.experience .leisure-price{margin-top:8px;padding-top:6px;font-size:19px;line-height:1.35}
 .experience .leisure-price strong{font-size:30px}
-.experience .leisure-note{margin-top:10px}
+.experience .leisure-note{margin-top:8px;line-height:1.7}
 .experience>.leisure-image-note{margin-top:16px}.experience>.age-note{margin-top:12px}
-@media(max-width:1100px){.experience .leisure-row{grid-template-columns:minmax(0,45fr) minmax(0,55fr)}.experience .leisure-content{padding:16px 22px}}
-@media(max-width:800px){.experience{padding-top:40px;padding-bottom:40px}.experience .leisure-row{grid-template-columns:minmax(0,1fr);padding:12px}.experience .leisure-visual{max-width:280px}.experience .leisure-visual img{max-height:150px}.experience .leisure-content{padding:18px 8px 12px}.experience>.section-label{margin-bottom:24px}.experience .leisure-list{gap:18px}}
+@media(max-width:1100px){.experience .leisure-row{grid-template-columns:minmax(0,45fr) minmax(0,55fr)}.experience .leisure-content{padding:8px 22px}}
+@media(max-width:800px){.experience{padding-top:40px;padding-bottom:40px}.experience .leisure-row{grid-template-columns:minmax(0,1fr);padding:12px}.experience .leisure-visual{max-width:280px}.experience .leisure-visual img{max-height:100px}.experience .leisure-content{padding:12px 8px 6px}.experience>.section-label{margin-bottom:24px}.experience .leisure-list{gap:12px}}
 
 /* Clip screenshot edges inside the original photo dimensions. Originals stay intact. */
 .store-photo-frame{position:relative;width:100%;overflow:hidden}
