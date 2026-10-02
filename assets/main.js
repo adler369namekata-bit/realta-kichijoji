@@ -1,7 +1,7 @@
 'use strict';
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#site-nav');
-const mobileViewport = window.matchMedia('(max-width: 800px)');
+const mobileViewport = window.matchMedia('(max-width: 1000px)');
 
 function setMenuOpen(open) {
   menuButton.setAttribute('aria-expanded', String(open));
