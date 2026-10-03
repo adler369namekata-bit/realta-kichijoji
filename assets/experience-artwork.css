@@ -18,3 +18,22 @@
   object-fit: contain;
   object-position: center;
 }
+
+/* Mobile artwork uses its natural height instead of the old card footprint. */
+@media (max-width: 800px) {
+  .experience-artwork {
+    height: auto;
+    min-height: 0;
+    margin-block: 0;
+    padding: 0;
+  }
+
+  .experience-artwork > :not(.experience-artwork-image) {
+    display: none;
+  }
+
+  .experience-artwork > .experience-artwork-image {
+    position: static;
+    height: auto;
+  }
+}

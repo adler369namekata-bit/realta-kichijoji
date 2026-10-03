@@ -111,3 +111,11 @@ h1,h2,h3,.photo-intro>p:last-child{font-family:var(--serif);font-weight:300}
 .counter-photo .store-photo-frame img{transform:translate(-2.01%,-1.41%) scale(1.0201)}
 .shelf-photo .store-photo-frame img{transform:translate(-3.35%,-1.65%) scale(1.0335)}
 .exterior-photo .store-photo-frame img{transform:translate(-1.1%,-1.32%) scale(1.022)}
+
+/* Keep mobile section boundaries compact without changing their contents. */
+@media (max-width: 800px) {
+  .section:not(.experience-artwork) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
