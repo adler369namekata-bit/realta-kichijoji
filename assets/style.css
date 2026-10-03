@@ -119,3 +119,26 @@ h1,h2,h3,.photo-intro>p:last-child{font-family:var(--serif);font-weight:300}
     padding-bottom: 32px;
   }
 }
+
+/* Keep Japanese phrases and the establishment date together on mobile. */
+@media (max-width: 800px) {
+  .about-body > p:not(.eyebrow) {
+    line-break: strict;
+    word-break: normal;
+    overflow-wrap: normal;
+    text-wrap: pretty;
+  }
+
+  .about-phrase {
+    white-space: nowrap;
+  }
+
+  .about-facts > div:first-child strong {
+    white-space: nowrap;
+  }
+
+  .about-facts > div:first-child strong span {
+    display: inline;
+    margin-left: 0;
+  }
+}
