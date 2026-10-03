@@ -1,0 +1,47 @@
+/* Motion affects painting only; the existing layout remains the size reference. */
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-pending {
+    opacity: 0;
+  }
+
+  .scroll-enter {
+    animation: quiet-reveal 850ms ease-out var(--reveal-delay, 0ms) backwards;
+  }
+
+  .scroll-enter .store-photo-frame img {
+    animation: quiet-photo-zoom 4s ease-out var(--reveal-delay, 0ms) backwards;
+  }
+
+  .experience-artwork-image.scroll-enter {
+    animation: quiet-photo-zoom 4s ease-out var(--reveal-delay, 0ms) backwards,
+      quiet-reveal 850ms ease-out var(--reveal-delay, 0ms) backwards;
+  }
+
+  .experience-artwork:has(> .scroll-enter) {
+    overflow: clip;
+  }
+}
+
+@keyframes quiet-reveal {
+  from { opacity: 0; translate: 0 16px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+/* Independent scale preserves the existing photo-cropping transforms. */
+@keyframes quiet-photo-zoom {
+  0% { scale: 1; }
+  70% { scale: 1.025; }
+  100% { scale: 1; }
+}
+
+@media (max-width: 800px) and (prefers-reduced-motion: no-preference) {
+  .scroll-enter {
+    animation-duration: 700ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-pending { opacity: 1; }
+  .scroll-enter,
+  .scroll-enter .store-photo-frame img { animation: none; }
+}

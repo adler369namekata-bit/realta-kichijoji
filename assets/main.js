@@ -26,3 +26,48 @@ document.addEventListener('keydown', (event) => {
 });
 mobileViewport.addEventListener('change', syncNavigation);
 syncNavigation();
+
+// One observer, no scroll handlers; reveal each visible content block once.
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+if ('IntersectionObserver' in window && !reducedMotion.matches) {
+  const targets = document.querySelectorAll([
+    '.section-label', '.about-body > p', '.about-body > h2', '.about-facts',
+    '.story-heading', '.story-prose > p', '.section-heading > *',
+    '.drinks-copy h3', '.drinks-copy p', '.store-photo',
+    '.experience-artwork-image', '.info-layout > h2', '.info-list',
+    '.access-layout > div > *', '.contact > *'
+  ].join(','));
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.remove('scroll-pending');
+      entry.target.classList.add('scroll-enter');
+      observer.unobserve(entry.target);
+    }
+  }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
+
+  for (const target of targets) {
+    if (target.closest('[inert], [aria-hidden="true"]')) continue;
+    const rect = target.getBoundingClientRect();
+    // Keep the initial viewport and restored scroll position immediately readable.
+    if (!rect.width || !rect.height || rect.top < window.innerHeight) continue;
+    const isImage = target.matches('.store-photo, .experience-artwork-image');
+    const isHeading = target.matches('h2, h3, .section-label, .eyebrow, .story-heading');
+    target.style.setProperty('--reveal-delay', isImage ? '140ms' : isHeading ? '0ms' : '70ms');
+    target.classList.add('scroll-pending');
+    observer.observe(target);
+  }
+
+  // Keyboard users must never focus invisible links during the entrance delay.
+  document.addEventListener('focusin', (event) => {
+    const target = event.target.closest('.scroll-pending');
+    if (!target) return;
+    target.classList.remove('scroll-pending');
+    observer.unobserve(target);
+  });
+  reducedMotion.addEventListener('change', () => {
+    if (!reducedMotion.matches) return;
+    observer.disconnect();
+    for (const target of targets) target.classList.remove('scroll-pending', 'scroll-enter');
+  });
+}
