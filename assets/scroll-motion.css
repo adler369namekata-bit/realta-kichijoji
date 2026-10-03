@@ -9,11 +9,11 @@
   }
 
   .scroll-enter .store-photo-frame img {
-    animation: quiet-photo-zoom 4s ease-out var(--reveal-delay, 0ms) backwards;
+    animation: quiet-photo-zoom 4s ease-out var(--reveal-delay, 0ms) both;
   }
 
   .experience-artwork-image.scroll-enter {
-    animation: quiet-photo-zoom 4s ease-out var(--reveal-delay, 0ms) backwards,
+    animation: quiet-photo-zoom 4s ease-out var(--reveal-delay, 0ms) both,
       quiet-reveal 850ms ease-out var(--reveal-delay, 0ms) backwards;
   }
 
@@ -31,7 +31,7 @@
 @keyframes quiet-photo-zoom {
   0% { scale: 1; }
   70% { scale: 1.025; }
-  100% { scale: 1; }
+  100% { scale: 1.025; }
 }
 
 @media (max-width: 800px) and (prefers-reduced-motion: no-preference) {
