@@ -41,6 +41,10 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
       entry.target.classList.remove('scroll-pending');
+      // Commit the final photo scale independently of the animation lifecycle.
+      const photo = entry.target.matches('.experience-artwork-image')
+        ? entry.target : entry.target.querySelector('.store-photo-frame img');
+      if (photo) photo.classList.add('photo-zoomed');
       entry.target.classList.add('scroll-enter');
       observer.unobserve(entry.target);
     }
@@ -57,6 +61,13 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
     target.classList.add('scroll-pending');
     observer.observe(target);
   }
+
+  // Retire the finished zoom so a later media change cannot restart it at 1.
+  document.addEventListener('animationend', (event) => {
+    if (event.animationName !== 'quiet-photo-zoom') return;
+    const entered = event.target.closest('.scroll-enter');
+    if (entered) entered.classList.remove('scroll-enter');
+  });
 
   // Keyboard users must never focus invisible links during the entrance delay.
   document.addEventListener('focusin', (event) => {

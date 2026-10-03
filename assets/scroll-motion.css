@@ -1,3 +1,12 @@
+/* The final photo scale survives animation cancellation and motion-setting changes. */
+.photo-zoomed {
+  scale: 1.025;
+}
+
+.experience-artwork:has(> .photo-zoomed) {
+  overflow: clip;
+}
+
 /* Motion affects painting only; the existing layout remains the size reference. */
 @media (prefers-reduced-motion: no-preference) {
   .scroll-pending {
