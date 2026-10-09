@@ -1,7 +1,7 @@
 'use strict';
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#site-nav');
-const mobileViewport = window.matchMedia('(max-width: 1000px)');
+const mobileViewport = window.matchMedia('(max-width: 1250px)');
 
 function setMenuOpen(open) {
   menuButton.setAttribute('aria-expanded', String(open));
@@ -31,10 +31,10 @@ syncNavigation();
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 if ('IntersectionObserver' in window && !reducedMotion.matches) {
   const targets = document.querySelectorAll([
-    '.section-label', '.about-body > p', '.about-body > h2', '.about-facts',
+    '.section-label', '.about-body > p', '.about-body > h2', '.about-body > h1', '.about-facts',
     '.story-heading', '.story-prose > p', '.section-heading > *',
     '.drinks-copy h3', '.drinks-copy p', '.store-photo',
-    '.experience-artwork-image', '.info-layout > h2', '.info-list',
+    '.experience-artwork-image', '.info-layout > h2', '.info-layout > h1', '.info-list',
     '.access-layout > div > *', '.contact > *'
   ].join(','));
   const observer = new IntersectionObserver((entries) => {
@@ -56,7 +56,7 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
     // Keep the initial viewport and restored scroll position immediately readable.
     if (!rect.width || !rect.height || rect.top < window.innerHeight) continue;
     const isImage = target.matches('.store-photo, .experience-artwork-image');
-    const isHeading = target.matches('h2, h3, .section-label, .eyebrow, .story-heading');
+    const isHeading = target.matches('h1, h2, h3, .section-label, .eyebrow, .story-heading');
     target.style.setProperty('--reveal-delay', isImage ? '140ms' : isHeading ? '0ms' : '70ms');
     target.classList.add('scroll-pending');
     observer.observe(target);
