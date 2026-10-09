@@ -1,0 +1,68 @@
+/* Sunday recruitment only; reuse the site's existing colors, fonts and button. */
+.sunday-owner-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 48px 70px;
+  align-items: start;
+}
+
+.sunday-owner-heading h2 {
+  margin: 18px 0 24px;
+  text-wrap: balance;
+}
+
+.sunday-owner-heading h2 span {
+  display: inline-block;
+}
+
+.sunday-owner-status {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--gold);
+}
+
+.sunday-owner-status span {
+  letter-spacing: .12em;
+}
+
+.sunday-owner-copy {
+  max-width: 660px;
+  font-size: 16px;
+  line-height: 2.1;
+  line-break: strict;
+  text-wrap: pretty;
+}
+
+.sunday-owner-copy p + p {
+  margin-top: 20px;
+}
+
+.sunday-owner-copy .sunday-owner-quote,
+.sunday-owner-copy .sunday-owner-invitation {
+  color: var(--text);
+}
+
+.sunday-owner-invitation strong {
+  font-weight: 500;
+}
+
+@media (max-width: 1000px) {
+  .sunday-owner-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  .sunday-owner-heading h2 {
+    margin: 14px 0 18px;
+  }
+
+  .sunday-owner-status {
+    font-size: 16px;
+  }
+
+  .sunday-owner-copy p + p {
+    margin-top: 18px;
+  }
+}
