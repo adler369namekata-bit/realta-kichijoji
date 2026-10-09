@@ -4,16 +4,7 @@
 
 ## ファイル構成
 
-- `index.html`：HOME（メインビジュアル）
-- `about.html`：ABOUT（レアルタについて）
-- `drink.html`：DRINK（ドリンク・サービス）
-- `darts.html`：DARTS（ダーツ）
-- `shisha.html`：SHISHA（シーシャ）
-- `sunday-bar-owner.html`：SUNDAY BAR OWNER（日曜オーナー募集）
-- `information.html`：INFORMATION（店舗情報・アクセス）
-- `contact.html`：CONTACT（電話でのお問い合わせ）
-- 各ページは共通ヘッダー・フッター、ページ別SEOメタデータ、既存のGA4タグとBarOrPub構造化データを使用します。
-- `assets/pages.css`：共通ナビゲーションと専用ページのレイアウト。ダーツ・シーシャの写真は既存の合成画像をCSSで表示範囲を分けて使用し、元ファイルは変更しません。
+- `index.html`：全7セクション、店舗情報、SEOメタデータ、BarOrPub構造化データ
 - `assets/style.css`：レスポンシブデザイン、装飾、アクセシビリティ対応
 - `assets/main.js`：スマートフォンのナビゲーション開閉
 - `assets/favicon.svg`：サイトアイコン
@@ -27,7 +18,7 @@
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-ブラウザで `http://127.0.0.1:8000` を開きます。各HTMLを直接開いて確認でき、内部リンクと素材パスはGitHub Pagesのサブディレクトリにも対応する相対パスです。停止するには Ctrl+C を押してください。依存パッケージのインストールは不要です。
+ブラウザで `http://127.0.0.1:8000` を開きます。停止するには Ctrl+C を押してください。依存パッケージのインストールは不要です。
 
 ## 公開
 
